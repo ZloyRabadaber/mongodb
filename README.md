@@ -76,7 +76,7 @@ Run MongoDB with a specific storage engine
 
 In MongoDB 3.0 there is a new environment variable `STORAGE_ENGINE` to specific the mongod storage driver:
 
-        docker run -d -p 27017:27017 -p 28017:28017 -e AUTH=no -e STORAGE_ENGINE=mmapv1 zrabadaber/mongodb:3.0
+        docker run -d -p 27017:27017 -p 28017:28017 -e AUTH=no -e STORAGE_ENGINE=mmapv1 zrabadaber/mongodb
 
 By default is "wiredTiger".
 
@@ -86,7 +86,7 @@ Change the default oplog size
 
 In MongoDB 3.0 the variable `OPLOG_SIZE` can be used to specify the mongod oplog size in megabytes:
 
-        docker run -d -p 27017:27017 -p 28017:28017 -e AUTH=no -e OPLOG_SIZE=50 zrabadaber/mongodb:3.0
+        docker run -d -p 27017:27017 -p 28017:28017 -e AUTH=no -e OPLOG_SIZE=50 zrabadaber/mongodb
 
 By default MongoDB allocates 5% of the available free disk space, but will always allocate at least 1 gigabyte and never more than 50 gigabytes.
 
